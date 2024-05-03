@@ -1,0 +1,168 @@
+
+
+body {
+  font-family: 'Nunito Sans', sans-serif; /* Keep font as Nunito Sans */
+  text-align: center;
+  background: linear-gradient(to right, #231f1f 10%, #2d2a2a 45%);
+}
+
+.container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+}
+
+#gameArea {
+  margin-bottom: 20px;
+}
+
+#eButton {
+  font-size: 48px;
+  padding: 20px 40px;
+  cursor: pointer;
+  background-color: #303030; /* Dark gray button */
+  color: #d4d4d4; /* Light gray text */
+  border: 2px solid #000000; /* Black border */
+  border-radius: 10%; /* Rounded shape */
+  transition: all 0.3s ease; /* Smooth transition */
+}
+
+#eButton:hover {
+  transform: scale(1.1); /* Scale up on hover */
+}
+
+#eCount {
+  font-size: 24px;
+  margin-top: 20px;
+  color: #d4d4d4; /* Light gray text */
+}
+
+#upgradeBtn {
+  font-size: 18px;
+  padding: 10px 20px;
+  cursor: pointer;
+  background-color: #303030; /* Dark gray button */
+  color: #fff; /* White text */
+  border: none;
+  border-radius: 10px;
+  transition: all 0.3s ease; /* Smooth transition */
+}
+
+#upgradeBtn:hover {
+  background-color: #0b0a0a; /* Darker gray on hover */
+}
+
+#upgradeMenu {
+  display: none;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  padding: 20px;
+  background-color: #303030; /* White background */
+  border-radius: 10px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.5); /* Shadow effect */
+  max-height: 60vh;
+  overflow-y: scroll; /* Always show scrollbar */
+}
+
+/* Customize scrollbar */
+#upgradeMenu::-webkit-scrollbar {
+  width: 12px;
+}
+
+#upgradeMenu::-webkit-scrollbar-track {
+  background: #303030; 
+}
+
+#upgradeMenu::-webkit-scrollbar-thumb {
+  background: #231f1f; 
+  border-radius: 10px;
+}
+
+#upgradeMenu::-webkit-scrollbar-thumb:hover {
+  background: #000000; 
+}
+
+.upgradeBtn {
+  font-size: 16px; /* Adjust font size as needed */
+  padding: 8px 16px; /* Adjust padding as needed */
+  margin-bottom: 8px; /* Adjust margin as needed */
+  background-color: #231f1f; /* Green button color */
+  color: white; /* White text color */
+  border: none; /* No border */
+  border-radius: 5px; /* Rounded corners */
+  cursor: pointer; /* Cursor on hover */
+  transition: background-color 0.3s ease; /* Smooth transition */
+}
+
+.upgradeBtn:hover {
+  background-color: #000000; /* Darker green on hover */
+}
+
+.closeBtn {
+  font-size: 16px; /* Adjust font size as needed */
+  padding: 8px 16px; /* Adjust padding as needed */
+  background-color: #303030; /* Dark gray button */
+  color: white; /* White text color */
+  border: none; /* No border */
+  border-radius: 5px; /* Rounded corners */
+  cursor: pointer; /* Cursor on hover */
+  transition: background-color 0.3s ease; /* Smooth transition */
+}
+
+.closeBtn:hover {
+  background-color: #0b0a0a; /* Darker gray on hover */
+}
+
+.cartoon-animation {
+  animation: cartoonPop 0.5s ease forwards;
+}
+
+.ePressAnimation {
+  animation: ePressScale 0.2s ease forwards;
+}
+
+.shake-effect {
+  animation: shake 0.5s;
+}
+
+@keyframes cartoonPop {
+  0% {
+    transform: scale(0.8);
+    opacity: 0;
+  }
+  100% {
+    transform: scale(1);
+    opacity: 1;
+  }
+}
+
+@keyframes ePressScale {
+  0% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(1.3);
+  }
+  100% {
+    transform: scale(1);
+  }
+}
+
+@keyframes shake {
+  0% { transform: translate(0, 0); }
+  10% { transform: translate(-5px, 0); }
+  20% { transform: translate(5px, 0); }
+  30% { transform: translate(-5px, 0); }
+  40% { transform: translate(5px, 0); }
+  50% { transform: translate(-5px, 0); }
+  60% { transform: translate(5px, 0); }
+  70% { transform: translate(-5px, 0); }
+
+  80% { transform: translate(5px, 0); }
+  90% { transform: translate(-5px, 0); }
+  100% { transform: translate(0, 0); }
+}

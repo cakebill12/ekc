@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>E Key Clicker</title>
+  <link rel="stylesheet" type="text/css" href="styles.css">
+</head>
+<body>
+  <!-- Define audio elements for error and click sounds -->
+  <audio id="errorSound">
+    <source src="errorSound.mp3" type="audio/mpeg">
+    Your browser does not support the audio element.
+  </audio>
+  <audio id="clickSound">
+    <source src="sounds/click.mp3" type="audio/mpeg">
+    Your browser does not support the audio element.
+  </audio>
+
+  <div class="container">
+    <div id="gameArea">
+      <button id="eButton">E</button>
+      <p id="eCount">E Count: 0</p>
+      <button id="upgradeBtn">UPGRADES</button>
+    </div>
+    <div id="upgradeMenu">
+      <button id="closeBtn">Close</button>
+      <div id="upgrades"></div>
+    </div>
+  </div>
+  <script src="script.js"></script>
+</body>
+</html>
